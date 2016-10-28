@@ -1,0 +1,566 @@
+/*Reset general para quitar los bordes de los diferentes navegadores*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400i,700i');
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: rgba(120,120,120,.5);
+	 background-size:100vw 100vh;
+}
+/**********Estilo del menu**********/
+ header{
+	 position: fixed;
+	z-index:1000;
+ }
+ /*Contenedor que contiene al .menu*/
+	 header.contenedor {
+		width: 90%;
+		max-width:1000px;
+		margin:auto;
+
+	}
+
+	header .menu {
+			position: fixed;
+			width: 100%;
+			height: 70px;
+			background-color: transparent;
+			-webkit-transition: background-color .5s;
+			-webkit-transition: background-color .5s;
+	}
+
+	header nav {
+			display: table;
+			margin: auto;
+			margin-top: 15px;
+			height: 40px;
+			-webkit-transition: margin-left .5s;
+	}
+
+		header nav ul {
+			float:left;
+			overflow:hidden;
+			list-style: none;
+		}
+		img#logo{
+			float:left;
+			display: block;
+			margin-left: 30px;
+			margin-right: 30px;
+			margin-top: 150px;
+			-webkit-transition: width .5s, height .5s, margin-right .5s, margin-top .5s;
+			}
+		header  ul li {
+			float: left;
+			margin: 10px;
+			padding: 5px;
+		}
+		header ul a{
+			color: #F3F3F3;
+			text-decoration: none;
+		}
+
+		/*Efecto hover para cuando se pasa el mouse en el menu*/
+		header nav ul li:hover {
+			 box-shadow: inset 0 0 0 2px #3a7999;
+			 border-radius:30px;
+			 background:#3e1056;
+		}
+
+
+
+/*para la parte responsive del menu, desaparece*/
+.menu_bar {
+	display:none;
+}
+
+	header label:hover{
+		cursor:pointer;
+		background:rgba(0,0,0,.3);
+	}
+
+/*galeria de imagen de la seccion3 portafolio*/
+	.galeria{
+		width:90%;
+		margin:auto;
+		list-style:none;
+		padding:10px;/*margen literal del contenedor*/
+		box-sizing:border-box;
+		display:flex;/*las alinia*/
+		flex-wrap:wrap;/*para que se ajuste cuando se mueve la ventana*/
+		justify-content:space-around;
+	}
+	/*propiedades de las imagenes*/
+	.galeria li{
+		margin:15px;/*para separarlas*/
+	}
+	.galeria img{/*Alturas*/
+		width:300px;
+		height:200px;
+	}
+
+
+
+
+/*Estilo modal de la galeria*/
+			.modal{
+				display:none;
+			}
+
+
+			.modal:target{
+				display:block;
+				position:fixed;
+				background: rgba(0,0,0,0.8);
+				top:70px;
+				left:0;
+				width:100%;
+				height:100%;
+			}
+			.modal h3{
+				color:#fff;
+				font-size:30px;
+				text-align:center;
+				margin:15px 0;
+			}
+			.imagen{
+				width:100%;
+				height:50%;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+			}
+			.imagen a{
+				color:#fff;
+				font-size:40px;
+				text-decoration:none;
+				margin:0 10px;
+			}
+			.imagen a:nth-child(2){
+				margin:0;
+				height:100%;
+				flex-shrink:2;/*para que encaje cuando se haga la ventana pequena*/
+			}
+
+			.imagen img{
+				width:500px;
+				height:100%;
+				max-width:100%;
+				border:7px solid #fff;
+				box-sizing:border-box;
+			}
+			.cerrar {
+				display:block;
+				background:#fff;
+				width:25px;
+				height:25px;
+				margin:15px auto;
+				text-align:center;
+				text-decoration:none;
+				font-size:25px;
+				color:#000;
+				padding:2px;
+				border-radius:50%;
+				line-height:25px;
+
+			}
+
+		/*Caracteristicas generales de los botones*/
+		.btns-soporte{
+			position:flex;
+			width:100%;
+			margin:auto;
+			list-style:none;
+			padding:20px;
+			box-sizing:border-box;
+			display:flex;/*las alinia*/
+			flex-wrap:wrap;/*para que se ajuste cuando se mueve la ventana*/
+			justify-content:space-around;
+
+		}
+		.btns-soporte li{
+			margin:5px;/*para separarlas*/
+		}
+
+		/*Botones con efecto de que ofrecemos efecto sombra*/
+		.btns-soporte  button.btn1{
+
+			 width: 300px;/*tamano de los botones*/
+			 height:150px;
+			 border: none;
+			 background:#428D92  ;
+			 color:#fff;/*Color de los botones*/
+			 font-size: 18px;/*color de las letras*/
+			 border-radius: 5px;
+			 position: relative;
+			 box-sizing: border-box;
+			 transition: all 500ms ease;
+		}
+		.btns-soporte  ul li {
+				overflow:hidden;
+				float: left;
+				margin: 20px;
+				padding: 20px;
+				list-style: none;
+				display:block;
+		}
+		button.btn1:hover {
+			 background: rgba(0,0,0,0);
+			/* color: #3e1056;*/
+			 box-shadow: inset 0 0 0 4px #b001aa;
+		}
+/******************* fondo 6 Contacto ******************/
+.formulario {
+  width: 500px;
+  z-index: 5;
+  left: 50%;
+
+}
+.mapa {
+  width: 500px;
+  z-index: 5;
+  right:50%;
+}
+.contacto{
+			position:flex;
+			width:100%;
+			margin:auto;
+			list-style:none;
+			padding:30px;
+			box-sizing:border-box;
+			display:flex;/*las alinia*/
+			flex-wrap:wrap;/*para que se ajuste cuando se mueve la ventana*/
+			justify-content:space-around;
+
+		}
+		.contacto  ul  {
+				overflow:hidden;
+				float: left;
+				margin: 10px;
+				padding: 20px;
+				list-style: none;
+				display:block;
+		}
+form{
+	width:450px;
+	margin-bottom: 5em;
+	background:#3e1056;/*rgba(0,0,0,0.4);*/
+	padding:10px 20px;
+	box-sizing:border-box;
+	border-radius:10px;
+}
+h3{
+	text-align: center;
+	margin: 0;
+	font-size: 30px;
+	margin-bottom:20px ;
+}
+input, textarea{
+	width: 100%;
+	margin-bottom: 20px;
+	padding:7px ;
+	box-sizing:border-box;
+	font-size: 17px;
+	border: none;
+}
+textarea{
+	min-height:100px;
+	max-height:200px ;
+	max-width:400px ;
+}
+#boton{
+	background:#31384a;
+	color:#fff;
+	padding:20px;
+}
+#boton:hover{
+	cursor: pointer;
+	background: rgba(0,0,0,0);
+	box-shadow: inset 0 0 0 3px #3a7999;
+}
+
+
+/**Cuando se se ecribe*/
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="textarea"]:focus,
+form textarea:focus {
+			box-shadow: 0px 0px 2px 2px #c94663;
+}
+form ::-webkit-input-placeholder {
+		color: #aaa;
+}
+
+form :-moz-placeholder {
+		color: #aaa;
+}
+
+form ::-moz-placeholder {
+		color: #aaa;
+}
+
+form :-ms-input-placeholder {
+		color: #aaa;
+}
+
+/***************Mapa***************************/
+.mapa{
+	outline:2px solid #3e1056;
+	width:500x;
+	height:450px;
+	flex-wrap:wrap;/*para que se ajuste cuando se mueve la ventana*/
+	justify-content:space-around;
+}
+	.mapa iframe{
+	width:100%;
+	height:100%;
+	}
+	/**********Estilos de las secciones de los fondos****************/
+section{
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size:100vw 100vh;
+		height: 100%;
+		max-width:1920px;
+		min-height:700px;
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+		width: 100%;
+}
+#banner{
+	background-image: url(../imagenes/fondo1.jpg);
+}
+
+#bloque2{
+	background-image: url(../imagenes/fondo2.jpg);
+}
+#bloque3{
+	background-image: url(../imagenes/fondo4.jpg);
+}
+#bloque4{
+	background-image: url(../imagenes/fondo3.jpg);
+}
+#bloque6{
+	background-image: url(../imagenes/fondo4.jpg);
+}
+/***************Caracteristica del texto****************************/
+article {
+	padding:100px;
+	background-color: transparent;
+	margin-bottom: 20px;
+	/*overflow:hidden;*/
+}
+
+		article .titulo {
+		font-size:1.5em;
+		color:#fff;
+		overflow:hidden;
+        font-family: 'Open Sans', sans-serif;    
+		}
+		article .fecha {
+		color:#939393;
+		overflow:hidden;
+        font-family: 'Open Sans', sans-serif;    
+		}
+		article p {
+		margin-bottom: 20px;
+		font-family: 'Open Sans', sans-serif;
+		font-size:1.0em;
+        font-weight: bold;
+		color:#5d015e;
+		overflow:hidden;
+		}
+        article h3 {
+            
+		font-size:1.3em;
+        font-family: 'Open Sans', sans-serif;    
+		color:#fff;
+		overflow:hidden;
+		}
+
+/****************Estilo redes sociales************/
+
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	right: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+	.social ul {
+		list-style: none;
+	}
+
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		overflow: hidden;
+		padding: 10px 20px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+	.social ul li .icon-facebook2 {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+	.social ul li .icon-github{background: #5d015e;}
+
+
+	.social ul li a:hover {
+		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 20px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+
+/*****************Estilo para el pie de pagina********************/
+
+footer {
+	background-color:#000;
+	width:100%;
+	height:70px;
+	border-top:5px solid #BD49DF;
+}
+		.copyright{
+			color:#fff;
+			text-align:center;
+			line-height:3;
+			font-family: 'Open Sans', sans-serif;
+
+		}
+
+
+/***************Estilo para cuando llegue una cierta medida responsive**********/
+@media screen and (max-width:900px ) {
+
+	img#logo{
+		display:none;
+	}
+	header label{
+		display:block;
+	}
+
+	header{
+		width: 100%;
+		height: 50%;
+	}
+
+	.contenedor{
+		position:absolute;
+		width: 120px;
+		max-width:250px;
+		margin:auto;
+		left:-100%;/*desaparece el menu... afecta el color si no lesgusta hay que cambiar a 70 y tmb al archivo menu.js a 70%*/
+	}
+
+	header nav ul li{
+		position: relative;
+		width:100px;
+		display:block;
+		border-top:2px solid rgba(255,255,255, .4);
+		padding:3px;/*reduce el tamano del menu para que se pueda ver en un dispositivo pequeno*/
+
+	}
+
+	.menu_bar {
+		cursor:pointer;
+		width:100%;
+		display:block;
+		background:#ccc;
+		top:0;
+	}
+
+	.menu_bar .bt-menu {
+		display:block;
+		padding:20px;
+		overflow:hidden;
+		background:#3e1056;
+		color:#fff;
+		text-decoration:none;
+		-weight: bold;
+		-size:25px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+
+	.menu_bar span {
+		float:right;
+		-size:40px;
+	}
+
+}
+@media screen and (max-width:1024px ) {
+	img#logo{
+		display:none;
+	}
+	header label{
+		display:block;
+	}
+
+	header{
+		width: 100%;
+		height: 50%;
+	}
+
+	.contenedor{
+		background:#000;
+		position:absolute;
+		width: 120px;
+		max-width:250px;
+		margin:auto;
+		left:-100%;/*desaparece el menu... afecta el color si no lesgusta hay que cambiar a 70 y tmb al archivo menu.js a 70%*/
+	}
+
+	header nav ul li{
+		position: relative;
+		width:100px;
+		display:block;
+		border-top:2px solid rgba(255,255,255, .4);
+		padding:3px;/*reduce el tamano del menu para que se pueda ver en un dispositivo pequeno*/
+
+	}
+
+	.menu_bar {
+		cursor:pointer;
+		width:100%;
+		display:block;
+		background:#3e1056;
+		top:0;
+	}
+
+	.menu_bar .bt-menu {
+		display:block;
+		padding:20px;
+		overflow:hidden;
+		background:#3e1056;
+		color:#fff;
+		text-decoration:none;
+		-weight: bold;
+		-size:25px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+
+	.menu_bar span {
+		float:right;
+		-size:40px;
+	}
+
+}
+
+
+/*****Responsive de mapa*******/
+@media (max-width:480px){
+	.mapa{
+		width:100%;
+		height: 100%;
+	}
+
+}
